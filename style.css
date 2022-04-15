@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0px;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    background: linear-gradient(to bottom right, #000abf, #7209B7, #F72585, #4CC9F0, #23d5ab);
+    background-size: 300% 300%;
+    animation: gradient 25s ease-in infinite;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 70% 100%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/*────────────────── 
+       header
+──────────────────*/
+
+header {
+    margin: 1vmax auto;
+    width: 100%;
+    height: 13vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    transition: 5s;
+    z-index: 5;
+}
+
+header:hover {
+    background: rgb(255, 255, 255, 0.3);
+}
+
+.nav-bar {
+    list-style: none;
+    position: relative;
+    display: inline-flex;
+}
+
+a.nav-link {
+    margin: 5px;
+    font-size: 3vmin;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 1px;
+    color: white;
+}
+
+.nav-link:hover {
+    color: #9912f3;
+    background: white;
+    transition: 0.5s;
+}
+
+
+/*────────────────── Home Page ──────────────────*/
+
+#home {
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+/* DEMO-SPECIFIC STYLES */
+
+.typewriter h3 {
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    animation: typing 3s steps(50, end), blink-caret 0s ease infinite;
+}
+
+
+/* The typing effect */
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+
+/*────────────────── Headings ──────────────────*/
+
+h1 {
+    font-size: 12vmin;
+    text-align: center;
+}
+
+h2 {
+    font-size: 8vmin;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+h3 {
+    font-size: 5vmin;
+    text-align: center;
+}
+
+hr {
+    background: white;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height: 5px;
+    width: 100px;
+    border-radius: 1px;
+    border: hidden;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+}
+
+
+/*             Scroll Button         */
+
+.demo a {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    z-index: 2;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: #fff;
+    text-decoration: none;
+}
+
+#scroll a {
+    padding-top: 15vh;
+}
+
+#scroll a span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    margin-left: -15px;
+    border-left: 4px solid #fff;
+    border-bottom: 4px solid #fff;
+    border-radius: 2px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    animation: sdb07 2s infinite;
+    box-sizing: border-box;
+}
+
+#scroll a span:nth-of-type(1) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+#scroll a span:nth-of-type(2) {
+    top: 16px;
+    -webkit-animation-delay: .15s;
+    animation-delay: .15s;
+}
+
+#scroll a span:nth-of-type(3) {
+    top: 32px;
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s;
+}
+
+@keyframes sdb07 {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+
+/*                  Arrow Down Button         */
+
+.demo2 a {
+    position: absolute;
+    left: 50%;
+    z-index: 2;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: #fff;
+    text-decoration: none;
+}
+
+#scroll2 a span {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    padding-top: 20px;
+    margin-left: -10px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: sdb02 2s infinite;
+    animation: sdb02 2s infinite;
+    opacity: 0;
+    box-sizing: border-box;
+}
+
+#scroll2 a span:nth-of-type(1) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+#scroll2 a span:nth-of-type(2) {
+    top: 16px;
+    -webkit-animation-delay: .15s;
+    animation-delay: .15s;
+}
+
+#scroll2 a span:nth-of-type(3) {
+    top: 32px;
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s;
+}
+
+@-webkit-keyframes sdb02 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes sdb02 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/*────────────────── About Me ──────────────────*/
+
+.about {
+    text-align: center;
+    padding: 100px 40px 30px 40px;
+}
+
+.about p {
+    padding: 30px 10vw 0px 10vw;
+    text-align: left;
+    font-size: 3.5vmin;
+}
+
+
+/*             Resume Button                */
+
+.button {
+    color: white;
+    font-size: 3.5vmin;
+    text-decoration: none;
+    border: 0.3vmin solid white;
+    border-radius: 30px;
+    display: inline-block;
+    padding: 15px 20px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: white;
+    color: #7209B7;
+    font-style: italic;
+}
+
+.button span {
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.button span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 15px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+/*────────────────── Projects ──────────────────*/
+
+#projects {
+    padding-top: 100px;
+    text-align: center;
+}
+
+table {
+    margin: auto;
+    padding: 2vw;
+    max-width: 90vw;
+}
+
+th {
+    padding-bottom: 10px;
+    font-size: 5vmin;
+}
+
+td {
+    padding: 2vw;
+    text-align: left;
+}
+
+.projectname {
+    font-size: 4vmin;
+    text-align: center;
+}
+
+.descrip {
+    font-size: 3.5vmin;
+    padding-left: 3vw;
+    max-width: 50vw;
+}
+
+.end {
+    text-align: center;
+    font-size: 4.5vmin;
+}
+
+table a {
+    color: #ff9f9f;
+    text-decoration: none;
+}
+
+
+/*──────────────────
+      Contact
+──────────────────*/
+
+#contact {
+    margin: auto;
+    min-height: 60vh;
+    padding-top: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact p {
+    padding: 10px;
+    text-align: center;
+    font-size: 4vmin;
+}
+
+
+/*────────────────── 
+       footer
+──────────────────*/
+
+footer {
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+
+
+/*────────────────── 
+     hamburger
+──────────────────*/
+
+.hamburger {
+    display: none;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background: #ffffff;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translatey(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translatey(0px);
+    }
+}
+
+
+/*────────────────── Social Media Icons ──────────────────*/
+
+.social-media {
+    padding: 10px;
+    display: flex;
+    position: center;
+    align-items: space-around;
+    justify-content: center;
+}
+
+.social-media a {
+    margin: 10px;
+    font-size: 32px;
+    text-align: center;
+    display: inline-block;
+    color: #f10a72;
+}
+
+.social-media a:hover {
+    color: rgb(51, 212, 207);
+}
+
+
+/*────────────────── 
+    media queries
+──────────────────*/
+
+@media only screen and (max-width: 1484px) and (min-width: 1214px) {
+    .work {
+        padding-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 1214px) and (min-width: 1000px) {
+    .work {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #home,
+    #projects,
+    #contact {
+        overflow-x: hidden;
+    }
+    header:hover {
+        background: transparent;
+    }
+    .nav-bar {
+        position: fixed;
+        top: 0px;
+        right: 0;
+        width: 60%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background: rgb(255, 255, 255, 0.5);
+        transform: translatex(100%);
+        transition: transform 0.5s ease-in;
+        z-index: -1;
+    }
+    a.nav-link {
+        color: purple;
+        background: white;
+    }
+    .nav-link:hover {
+        color: white;
+        background: rgb(51, 212, 207);
+        transition: 0.5s;
+    }
+    .hamburger {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: block;
+        cursor: pointer;
+        z-index: 5;
+    }
+    .nav-bar li {
+        opacity: 1;
+    }
+    .about {
+        padding-top: 50px;
+        padding-bottom: 0px;
+    }
+    .about p {
+        padding: 30px 0 0 0;
+        text-align: left;
+        font-size: 4vmin;
+    }
+    #contact p {
+        padding: 10px 50px;
+    }
+    .descrip {
+        padding-left: 2vw;
+        min-width: 50vw;
+    }
+    .typewriter h3 {
+        white-space: normal;
+        animation: none;
+    }
+}
+
+.nav-active {
+    transform: translatex(0%);
+}
