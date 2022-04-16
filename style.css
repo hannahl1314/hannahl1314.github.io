@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 * {
     margin: 0;
     padding: 0px;
@@ -6,7 +7,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-main {
+body {
     background: linear-gradient(to bottom right, #000abf, #7209B7, #F72585, #4CC9F0, #23d5ab);
     background-size: 300% 300%;
     animation: gradient 25s ease-in infinite;
@@ -19,18 +20,17 @@ main {
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 70% 100%;
     }
+
     100% {
         background-position: 0% 50%;
     }
 }
 
-
-/*────────────────── 
-       header
-──────────────────*/
+/*────────────────── Header ──────────────────*/
 
 header {
     margin: 1vmax auto;
@@ -42,7 +42,7 @@ header {
     background: transparent;
     position: fixed;
     top: 0;
-    transition: 5s;
+    transition: 1s;
     z-index: 5;
 }
 
@@ -73,8 +73,7 @@ a.nav-link {
     transition: 0.5s;
 }
 
-
-/*────────────────── Home Page ──────────────────*/
+/*───────────────── Home Page ─────────────────*/
 
 #home {
     margin: auto;
@@ -85,9 +84,7 @@ a.nav-link {
     justify-content: space-evenly;
 }
 
-
 /* DEMO-SPECIFIC STYLES */
-
 .typewriter h3 {
     overflow: hidden;
     /* Ensures the content is not revealed until the animation */
@@ -95,21 +92,23 @@ a.nav-link {
     /* Keeps the content on a single line */
     margin: 0 auto;
     /* Gives that scrolling effect as the typing happens */
-    animation: typing 3s steps(50, end), blink-caret 0s ease infinite;
+    animation:
+        typing 3s steps(70, end),
+        blink-caret 0s ease infinite;
+    font-size: 5vmin;
+    text-align: center;
 }
 
-
 /* The typing effect */
-
 @keyframes typing {
     from {
         width: 0;
     }
+
     to {
         width: 100%;
     }
 }
-
 
 /*────────────────── Headings ──────────────────*/
 
@@ -125,11 +124,6 @@ h2 {
     padding-top: 10px;
 }
 
-h3 {
-    font-size: 5vmin;
-    text-align: center;
-}
-
 hr {
     background: white;
     margin-top: 10px;
@@ -141,7 +135,6 @@ hr {
     margin-inline-start: auto;
     margin-inline-end: auto;
 }
-
 
 /*                  Arrow Down Button         */
 
@@ -191,28 +184,28 @@ hr {
     0% {
         opacity: 0.5;
     }
+
     50% {
         opacity: 1;
     }
+
     100% {
         opacity: 0.5;
     }
 }
 
-
 /*────────────────── About Me ──────────────────*/
 
 .about {
     text-align: center;
-    padding: 100px 40px 30px 40px;
+    padding: 100px 12vw 30px 12vw;
 }
 
 .about p {
-    padding: 30px 10vw 0px 10vw;
+    padding-top: 30px;
     text-align: left;
     font-size: 3.5vmin;
 }
-
 
 /*             Resume Button                */
 
@@ -221,16 +214,15 @@ hr {
     font-size: 3.5vmin;
     text-decoration: none;
     border: 0.3vmin solid white;
-    border-radius: 30px;
+    border-radius: 5vmax;
     display: inline-block;
     padding: 15px 20px;
     margin-top: 30px;
-    cursor: pointer;
 }
 
 .button:hover {
     background-color: white;
-    color: #7209B7;
+    color: #F72585;
     font-style: italic;
 }
 
@@ -238,7 +230,6 @@ hr {
     display: inline-block;
     position: relative;
     transition: 0.5s;
-    cursor: pointer;
 }
 
 .button span:after {
@@ -256,7 +247,6 @@ hr {
     opacity: 1;
     right: 0;
 }
-
 
 /*────────────────── Projects ──────────────────*/
 
@@ -294,7 +284,7 @@ td {
 
 .end {
     text-align: center;
-    font-size: 4.5vmin;
+    font-size: 3.5vmin;
 }
 
 table a {
@@ -302,17 +292,12 @@ table a {
     text-decoration: none;
 }
 
-
-/*──────────────────
-      Contact
-──────────────────*/
+/*────────────────── Contact ──────────────────*/
 
 #contact {
     margin: auto;
     min-height: 60vh;
     padding-top: 100px;
-    align-items: center;
-    justify-content: center;
 }
 
 #contact p {
@@ -321,10 +306,7 @@ table a {
     font-size: 4vmin;
 }
 
-
-/*────────────────── 
-       footer
-──────────────────*/
+/*────────────────── Footer ──────────────────*/
 
 footer {
     width: 100%;
@@ -332,11 +314,7 @@ footer {
     background: white;
 }
 
-
-/*────────────────── 
-     hamburger
-──────────────────*/
-
+/*────────────────── Hamburger ──────────────────*/
 .hamburger {
     display: none;
 }
@@ -366,14 +344,14 @@ footer {
         opacity: 0;
         transform: translatey(50px);
     }
+
     to {
         opacity: 1;
         transform: translatey(0px);
     }
 }
 
-
-/*────────────────── Social Media Icons ──────────────────*/
+/*─────────────── Social Media Icons ──────────────*/
 
 .social-media {
     padding: 10px;
@@ -395,32 +373,24 @@ footer {
     color: rgb(51, 212, 207);
 }
 
+/*────────────────── Media queries ──────────────────*/
 
-/*────────────────── 
-    media queries
-──────────────────*/
-
-@media only screen and (max-width: 1484px) and (min-width: 1214px) {
-    .work {
-        padding-top: 10px;
-    }
-}
-
-@media only screen and (max-width: 1214px) and (min-width: 1000px) {
-    .work {
-        padding: 10px;
+@media only screen and (max-width: 1020px) {
+    .about {
+        padding: 100px 10vw;
     }
 }
 
 @media only screen and (max-width: 500px) {
-    #home,
-    #projects,
-    #contact {
+
+    #home, #projects, #contact {
         overflow-x: hidden;
     }
+
     header:hover {
         background: transparent;
     }
+
     .nav-bar {
         position: fixed;
         top: 0px;
@@ -436,15 +406,18 @@ footer {
         transition: transform 0.5s ease-in;
         z-index: -1;
     }
+
     a.nav-link {
         color: purple;
         background: white;
     }
+
     .nav-link:hover {
         color: white;
         background: rgb(51, 212, 207);
         transition: 0.5s;
     }
+
     .hamburger {
         position: absolute;
         top: 20px;
@@ -453,28 +426,27 @@ footer {
         cursor: pointer;
         z-index: 5;
     }
+
     .nav-bar li {
         opacity: 1;
     }
+
     .about {
-        padding-top: 50px;
-        padding-bottom: 0px;
+        padding: 0px 8vw;
     }
+
     .about p {
-        padding: 30px 0 0 0;
         text-align: left;
         font-size: 4vmin;
     }
+
     #contact p {
         padding: 10px 50px;
     }
+
     .descrip {
         padding-left: 2vw;
         min-width: 50vw;
-    }
-    .typewriter h3 {
-        white-space: normal;
-        animation: none;
     }
 }
 
