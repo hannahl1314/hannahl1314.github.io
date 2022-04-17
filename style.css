@@ -199,6 +199,7 @@ hr {
 .about {
     text-align: center;
     padding: 10vh 12vw 30px 12vw;
+    padding-top: min(100px);
 }
 
 .about p {
