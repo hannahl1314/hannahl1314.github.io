@@ -198,7 +198,7 @@ hr {
 
 .about {
     text-align: center;
-    padding: 100px 12vw 30px 12vw;
+    padding: 10vh 12vw 30px 12vw;
 }
 
 .about p {
@@ -377,7 +377,7 @@ footer {
 
 @media only screen and (max-width: 1020px) {
     .about {
-        padding: 100px 10vw;
+        padding: 10vh 10vw;
     }
 }
 
@@ -432,7 +432,7 @@ footer {
     }
 
     .about {
-        padding: 0px 8vw;
+        padding: auto 8vw;
     }
 
     .about p {
