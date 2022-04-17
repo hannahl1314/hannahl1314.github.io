@@ -199,7 +199,6 @@ hr {
 .about {
     text-align: center;
     padding: 10vh 12vw 30px 12vw;
-    padding-top: min(100px);
 }
 
 .about p {
@@ -376,9 +375,10 @@ footer {
 
 /*────────────────── Media queries ──────────────────*/
 
-@media only screen and (max-width: 1020px) {
+@media only screen and (min-width: 1000px) {
     .about {
         padding: 10vh 10vw;
+        padding-top: min(100px);
     }
 }
 
