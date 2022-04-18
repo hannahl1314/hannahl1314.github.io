@@ -84,32 +84,33 @@ a.nav-link {
     justify-content: space-evenly;
 }
 
-/* DEMO-SPECIFIC STYLES */
 .typewriter h3 {
-    overflow: hidden;
-    /* Ensures the content is not revealed until the animation */
-    white-space: nowrap;
-    /* Keeps the content on a single line */
-    margin: 0 auto;
-    /* Gives that scrolling effect as the typing happens */
-    animation:
-        typing 3s steps(70, end),
-        blink-caret 0s ease infinite;
-    font-size: 5vmin;
-    text-align: center;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid white; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  font-size: 5vmin;
+  text-align: center;
+  animation: 
+    typing 3s steps(30, end),
+    blink-caret .5s step-end infinite;
 }
 
 /* The typing effect */
 @keyframes typing {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100%;
-    }
+  from { width: 0 }
+  to { width: 100% }
 }
 
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { 
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
 /*────────────────── Headings ──────────────────*/
 
 h1 {
