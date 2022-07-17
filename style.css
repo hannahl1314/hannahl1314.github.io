@@ -5,12 +5,13 @@
     padding: 0px;
     scroll-behavior: smooth;
     font-family: 'Montserrat', sans-serif;
+
 }
 
 body {
+    color: var(--white);
     background: url(background.jpg) no-repeat center fixed;
     background-size: 100% 100%;
-    color: var(--white);
 }
 
 :root {
@@ -25,14 +26,13 @@ body {
 }
 
 .whitebg {
-    background-color: rgb(255,255,255,0.9);
+    background-color: rgb(255, 255, 255, 0.9);
     padding: 10vmin 10vw;
 }
 
 /*────────────────── Header ──────────────────*/
 
 header {
-    margin: auto;
     width: 100%;
     height: 13vh;
     display: flex;
@@ -70,6 +70,7 @@ a.nav-link {
     transition: 0.3s;
 }
 
+
 /*───────────────── Home Page ─────────────────*/
 
 #home {
@@ -83,19 +84,27 @@ a.nav-link {
 }
 
 .typewriter h3 {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  font-size: 5vmin;
-  animation: 
-    typing 2.5s steps(50, end),
-    blink-caret .2s step-end infinite;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    font-size: 5vmin;
+    animation:
+        typing 2.5s steps(50, end),
+        blink-caret .2s step-end infinite;
 }
 
 /* The typing effect */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
 }
 
 /* The typewriter cursor effect 
@@ -172,7 +181,7 @@ hr {
 .about {
     text-align: center;
     color: var(--blue);
-    background-color: rgb(255,255,255,0.9);
+    background-color: rgb(255, 255, 255, 0.9);
     padding: 10vmin 10vw;
 }
 
@@ -231,7 +240,7 @@ hr {
 }
 
 .projects {
-    background-color: rgb(255,255,255,0.9);
+    background-color: rgb(255, 255, 255, 0.9);
     padding: 10vmin 10vw;
 }
 
@@ -290,45 +299,7 @@ table a {
 
 footer {
     width: 100%;
-    height: 100%;
-    background: white;
-}
-
-/*────────────────── Bars ──────────────────*/
-.bars {
-    display: none;
-}
-
-.bars div {
-    width: 30px;
-    height: 3px;
-    background: #ffffff;
-    margin: 5px;
-    transition: all 0.3s ease;
-}
-
-.toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.toggle .line2 {
-    opacity: 0;
-}
-
-.toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-}
-
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translatey(50px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translatey(0px);
-    }
+    background: var(--white);
 }
 
 /*─────────────── Social Media Icons ──────────────*/
@@ -356,10 +327,16 @@ footer {
 
 /*────────────────── Media queries ──────────────────*/
 
-@media only screen and (max-width: 999px) {
+@media (max-width: 900px) {
 
-    #home, #projects, #contact {
+    #home,
+    #projects,
+    #contact {
         overflow-x: hidden;
+    }
+
+    body {
+        background-size: auto 100%;
     }
 
     .section {
@@ -379,20 +356,10 @@ footer {
         background: rgb(255, 255, 255, 0.5);
         transform: translatex(100%);
         transition: transform 0.5s ease-in;
-        z-index: -1;
-    }
-    
-    .nav-bar li {
-        opacity: 1;
     }
 
-    .bars {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        display: block;
-        cursor: pointer;
-        z-index: 5;
+    .nav-bar li {
+        opacity: 1;
     }
 
     .about p {
