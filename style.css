@@ -359,7 +359,6 @@ footer {
 @media only screen and (max-width: 999px) {
 
     body {
-        background: url(background.jpg) no-repeat center fixed;
         background-size: auto 100vh;
     }
 
