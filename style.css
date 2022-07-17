@@ -8,10 +8,8 @@
 }
 
 body {
-    background: url(background.jpg) no-repeat fixed;
+    background: url(background.jpg) no-repeat center fixed;
     background-size: 100% 100%;
-    width: 100%;
-    height: 100%;
     color: var(--white);
 }
 
@@ -23,11 +21,12 @@ body {
 }
 
 .section {
-    padding: 10vh;
+    padding: 10vmin;
 }
 
 .whitebg {
     background-color: rgb(255,255,255,0.9);
+    padding: 10vmin 10vw;
 }
 
 /*────────────────── Header ──────────────────*/
@@ -122,9 +121,9 @@ h2 {
 
 hr {
     background: var(--hot-pink);
-    margin: 3vh auto;
+    margin: 3vmin auto;
     height: 1vmin;
-    width: 8vw;
+    width: 8vmax;
     border-radius: 3vmax;
     border: hidden;
 }
@@ -173,6 +172,8 @@ hr {
 .about {
     text-align: center;
     color: var(--blue);
+    background-color: rgb(255,255,255,0.9);
+    padding: 10vmin 10vw;
 }
 
 .about p {
@@ -188,10 +189,10 @@ hr {
     font-size: 3.5vmin;
     text-decoration: none;
     border: 0.3vmin solid var(--blue);
-    border-radius: 5vmax;
+    border-radius: 5vmin;
     display: inline-block;
-    padding: 3vh 2vw;
-    margin-top: 3vh;
+    padding: 3vmin 2vmax;
+    margin-top: 3vmax;
 }
 
 .button:hover {
@@ -225,13 +226,13 @@ hr {
 /*────────────────── Projects ──────────────────*/
 
 #projects {
-    padding-top: 10vh;
     text-align: center;
     color: var(--blue);
 }
 
 .projects {
-    padding: 10vh;
+    background-color: rgb(255,255,255,0.9);
+    padding: 10vmin 10vw;
 }
 
 table {
@@ -241,7 +242,7 @@ table {
 }
 
 th {
-    padding-bottom: 1vh;
+    padding-bottom: 1vmin;
     font-size: 5vmin;
 }
 
@@ -293,12 +294,12 @@ footer {
     background: white;
 }
 
-/*────────────────── Hamburger ──────────────────*/
-.hamburger {
+/*────────────────── Bars ──────────────────*/
+.bars {
     display: none;
 }
 
-.hamburger div {
+.bars div {
     width: 30px;
     height: 3px;
     background: #ffffff;
@@ -341,7 +342,7 @@ footer {
 }
 
 .social-media a {
-    margin: 2vh 1vw;
+    margin: 2vmin 1vmax;
     font-size: 3vmax;
     text-align: center;
     display: inline-block;
@@ -355,16 +356,19 @@ footer {
 
 /*────────────────── Media queries ──────────────────*/
 
-@media only screen and (min-width: 1000px) {
-    .about {
-        padding: 10vh 10vw;
-    }
-}
+@media only screen and (max-width: 999px) {
 
-@media only screen and (max-width: 500px) {
+    body {
+        background: url(background.jpg) no-repeat center fixed;
+        background-size: auto 100vh;
+    }
 
     #home, #projects, #contact {
         overflow-x: hidden;
+    }
+
+    .section {
+        padding: 10vmin 0vmin;
     }
 
     .nav-bar {
@@ -382,22 +386,18 @@ footer {
         transition: transform 0.5s ease-in;
         z-index: -1;
     }
+    
+    .nav-bar li {
+        opacity: 1;
+    }
 
-    .hamburger {
+    .bars {
         position: absolute;
         top: 20px;
         right: 20px;
         display: block;
         cursor: pointer;
         z-index: 5;
-    }
-
-    .nav-bar li {
-        opacity: 1;
-    }
-
-    .about {
-        padding: auto 8vw;
     }
 
     .about p {
@@ -412,6 +412,10 @@ footer {
     .descrip {
         padding-left: 2vw;
         min-width: 50vw;
+    }
+
+    .social-media a {
+        margin: 2vmax;
     }
 }
 

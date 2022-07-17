@@ -1,12 +1,12 @@
-//hamburger
+//bars
 const navSlide = () => {
-    const hamburger = document.querySelector(".hamburger");
+    const bars = document.querySelector(".bars");
     const navbar = document.querySelector(".nav-bar");
     const navLinks = document.querySelectorAll(".nav-bar li");
-    hamburger.onclick = () => {
+    bars.onclick = () => {
         navbar.classList.toggle("nav-active");
-        //hamburger animation
-        hamburger.classList.toggle("toggle");
+        //bars animation
+        bars.classList.toggle("toggle");
     }
 }
 
