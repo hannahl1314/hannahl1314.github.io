@@ -2,4 +2,4 @@
 
 My personal website! 
 
-Feel free to check it out for my introduction and projects. 
+Feel free to check it out for an introduction to me and my projects. 
