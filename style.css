@@ -1,39 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 * {
     margin: 0;
     padding: 0px;
     scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    background: linear-gradient(to bottom right, #000abf, #7209B7, #F72585, #4CC9F0, #23d5ab);
-    background-size: 300% 300%;
-    animation: gradient 25s ease-in infinite;
+    background: url(bg3.jpg) no-repeat fixed;
+    background-size: 100% 100%;
     width: 100%;
     height: 100%;
-    color: white;
+    color: var(--white);
 }
 
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
+:root {
+    --white: white;
+    --hot-pink: #F72585;
+    --light-green: #b1ffa1;
+    --blue: #346CD5;
+}
 
-    50% {
-        background-position: 70% 100%;
-    }
+.section {
+    padding: 10vh;
+}
 
-    100% {
-        background-position: 0% 50%;
-    }
+.whitebg {
+    background-color: rgb(255,255,255,0.9);
 }
 
 /*────────────────── Header ──────────────────*/
 
 header {
-    margin: 1vmax auto;
+    margin: auto;
     width: 100%;
     height: 13vh;
     display: flex;
@@ -41,13 +41,12 @@ header {
     justify-content: space-around;
     background: transparent;
     position: fixed;
-    top: 0;
     transition: 1s;
-    z-index: 5;
+    letter-spacing: 0.1vw;
 }
 
 header:hover {
-    background: rgb(255, 255, 255, 0.3);
+    background: rgb(255, 255, 255, 0.5);
 }
 
 .nav-bar {
@@ -57,20 +56,19 @@ header:hover {
 }
 
 a.nav-link {
-    margin: 5px;
+    margin: 1vw;
     font-size: 3vmin;
-    padding: 10px 20px;
+    padding: 1vh 2vw;
     text-decoration: none;
     cursor: pointer;
-    text-transform: uppercase;
-    border-radius: 1px;
-    color: white;
+    color: var(--blue);
 }
 
 .nav-link:hover {
-    color: #9912f3;
-    background: white;
-    transition: 0.5s;
+    border-bottom: solid 0.3vmin;
+    background: transparent;
+    color: var(--hot-pink);
+    transition: 0.3s;
 }
 
 /*───────────────── Home Page ─────────────────*/
@@ -82,18 +80,17 @@ a.nav-link {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    text-align: center;
 }
 
 .typewriter h3 {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid white; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   font-size: 5vmin;
-  text-align: center;
   animation: 
-    typing 3s steps(30, end),
-    blink-caret .5s step-end infinite;
+    typing 2.5s steps(50, end),
+    blink-caret .2s step-end infinite;
 }
 
 /* The typing effect */
@@ -102,7 +99,7 @@ a.nav-link {
   to { width: 100% }
 }
 
-/* The typewriter cursor effect */
+/* The typewriter cursor effect 
 @keyframes blink-caret {
   from, to { 
     border-color: transparent;
@@ -111,43 +108,34 @@ a.nav-link {
     border-color: white;
   }
 }
+*/
+
 /*────────────────── Headings ──────────────────*/
 
 h1 {
     font-size: 12vmin;
-    text-align: center;
 }
 
 h2 {
     font-size: 8vmin;
-    text-align: center;
-    padding-bottom: 10px;
-    padding-top: 10px;
 }
 
 hr {
-    background: white;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    height: 5px;
-    width: 100px;
-    border-radius: 1px;
+    background: var(--hot-pink);
+    margin: 3vh auto;
+    height: 1vmin;
+    width: 8vw;
+    border-radius: 3vmax;
     border: hidden;
-    margin-inline-start: auto;
-    margin-inline-end: auto;
 }
 
 /*                  Arrow Down Button         */
 
 .scroll a {
     position: absolute;
-    bottom: 20px;
-    left: 50%;
-    z-index: 2;
+    bottom: 5vh;
     display: inline-block;
-    -webkit-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-    color: #fff;
+    color: var(--white);
     text-decoration: none;
     padding-top: 15vh;
 }
@@ -155,31 +143,16 @@ hr {
 #scroll a span {
     position: absolute;
     top: 0;
-    left: 50%;
-    width: 30px;
-    height: 30px;
-    margin-left: -15px;
-    border-left: 3.5px solid #fff;
-    border-bottom: 3.5px solid #fff;
-    border-radius: 2px;
+    width: 5vmin;
+    height: 5vmin;
+    margin-left: -.5vw;
+    border-left: .8vmin solid var(--white);
+    border-bottom: .8vmin solid var(--white);
     transform: rotate(-45deg);
     animation: sdb07 2s infinite;
     box-sizing: border-box;
 }
 
-#scroll a span:nth-of-type(1) {
-    animation-delay: 0s;
-}
-
-#scroll a span:nth-of-type(2) {
-    top: 16px;
-    animation-delay: .15s;
-}
-
-#scroll a span:nth-of-type(3) {
-    top: 32px;
-    animation-delay: .3s;
-}
 
 @keyframes sdb07 {
     0% {
@@ -199,11 +172,11 @@ hr {
 
 .about {
     text-align: center;
-    padding: 10vh 12vw 30px 12vw;
+    color: var(--blue);
 }
 
 .about p {
-    padding-top: 30px;
+    padding-top: 3vh;
     text-align: left;
     font-size: 3.5vmin;
 }
@@ -211,19 +184,19 @@ hr {
 /*             Resume Button                */
 
 .button {
-    color: white;
+    color: var(--blue);
     font-size: 3.5vmin;
     text-decoration: none;
-    border: 0.3vmin solid white;
+    border: 0.3vmin solid var(--blue);
     border-radius: 5vmax;
     display: inline-block;
-    padding: 15px 20px;
-    margin-top: 30px;
+    padding: 3vh 2vw;
+    margin-top: 3vh;
 }
 
 .button:hover {
-    background-color: white;
-    color: #F72585;
+    color: var(--hot-pink);
+    border: 0.3vmin solid var(--hot-pink);
     font-style: italic;
 }
 
@@ -241,7 +214,7 @@ hr {
 }
 
 .button:hover span {
-    padding-right: 15px;
+    padding-right: 1.5vw;
 }
 
 .button:hover span:after {
@@ -252,8 +225,13 @@ hr {
 /*────────────────── Projects ──────────────────*/
 
 #projects {
-    padding-top: 100px;
+    padding-top: 10vh;
     text-align: center;
+    color: var(--blue);
+}
+
+.projects {
+    padding: 10vh;
 }
 
 table {
@@ -263,7 +241,7 @@ table {
 }
 
 th {
-    padding-bottom: 10px;
+    padding-bottom: 1vh;
     font-size: 5vmin;
 }
 
@@ -289,7 +267,7 @@ td {
 }
 
 table a {
-    color: #b1ffa1;
+    color: var(--hot-pink);
     text-decoration: none;
 }
 
@@ -298,12 +276,12 @@ table a {
 #contact {
     margin: auto;
     min-height: 60vh;
-    padding-top: 100px;
+    text-align: center;
+    padding-top: 15vh;
 }
 
 #contact p {
-    padding: 10px;
-    text-align: center;
+    padding: 2vh;
     font-size: 4vmin;
 }
 
@@ -355,7 +333,7 @@ footer {
 /*─────────────── Social Media Icons ──────────────*/
 
 .social-media {
-    padding: 10px;
+    padding: 1vw;
     display: flex;
     position: center;
     align-items: space-around;
@@ -363,15 +341,16 @@ footer {
 }
 
 .social-media a {
-    margin: 10px;
-    font-size: 32px;
+    margin: 2vh 1vw;
+    font-size: 3vmax;
     text-align: center;
     display: inline-block;
-    color: #f10a72;
+    color: var(--blue);
 }
 
 .social-media a:hover {
-    color: rgb(51, 212, 207);
+    /* color: rgb(51, 212, 207); */
+    color: var(--hot-pink);
 }
 
 /*────────────────── Media queries ──────────────────*/
@@ -379,7 +358,6 @@ footer {
 @media only screen and (min-width: 1000px) {
     .about {
         padding: 10vh 10vw;
-        padding-top: min(100px);
     }
 }
 
@@ -387,10 +365,6 @@ footer {
 
     #home, #projects, #contact {
         overflow-x: hidden;
-    }
-
-    header:hover {
-        background: transparent;
     }
 
     .nav-bar {
@@ -407,17 +381,6 @@ footer {
         transform: translatex(100%);
         transition: transform 0.5s ease-in;
         z-index: -1;
-    }
-
-    a.nav-link {
-        color: purple;
-        background: white;
-    }
-
-    .nav-link:hover {
-        color: white;
-        background: rgb(51, 212, 207);
-        transition: 0.5s;
     }
 
     .hamburger {
@@ -452,6 +415,3 @@ footer {
     }
 }
 
-.nav-active {
-    transform: translatex(0%);
-}
