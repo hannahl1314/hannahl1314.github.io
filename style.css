@@ -3,7 +3,6 @@
 
 
 :root {
-    --white: white;
     --hot-pink: #F72585;
     --light-green: #b1ffa1;
     --blue: #346CD5;
@@ -101,7 +100,7 @@ a.nav-link {
     to {
         width: 100%;
     }
-} 
+}
 
 /*────────────────── Headings ──────────────────*/
 
@@ -128,7 +127,7 @@ hr {
     position: absolute;
     bottom: 5vh;
     display: inline-block;
-    color: var(--white);
+    color: white;
     text-decoration: none;
     padding-top: 15vh;
 }
@@ -139,8 +138,8 @@ hr {
     width: 5vmin;
     height: 5vmin;
     margin-left: -.5vw;
-    border-left: .8vmin solid var(--white);
-    border-bottom: .8vmin solid var(--white);
+    border-left: .8vmin solid white;
+    border-bottom: .8vmin solid white;
     transform: rotate(-45deg);
     animation: sdb07 2s infinite;
     box-sizing: border-box;
@@ -350,7 +349,9 @@ footer {
 
 @media (max-width: 900px) {
 
-    #home, #projects, #contact {
+    #home,
+    #projects,
+    #contact {
         overflow-x: hidden;
     }
 
