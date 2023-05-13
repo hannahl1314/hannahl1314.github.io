@@ -185,6 +185,7 @@ hr {
     display: inline-block;
     padding: 3vmin 2vmax;
     margin-top: 3vmax;
+    margin-left: 5vmax;
 }
 
 .button:hover {
