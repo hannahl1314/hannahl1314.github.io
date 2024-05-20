@@ -3,9 +3,9 @@
 
 
 :root {
-    --hot-pink: #F72585;
+    --pink: pink;
     --light-green: #b1ffa1;
-    --blue: #346CD5;
+    --blue: #6C90C6;
 }
 
 * {
@@ -16,14 +16,15 @@
 }
 
 body {
-    background: url(background.jpg) no-repeat center fixed;
+    background: url(background1.jpg) no-repeat center fixed;
     background-size: 100% 100%;
-    color: white;
+    color: pink;
 }
 
 .section {
     padding: 10vh;
 }
+
 
 /*────────────────── Header ──────────────────*/
 
@@ -59,7 +60,7 @@ a.nav-link {
 }
 
 .nav-link:hover {
-    color: var(--hot-pink);
+    color: var(--pink);
     border-bottom: solid 0.3vmin;
     transition: 0.3s;
 }
@@ -106,19 +107,25 @@ a.nav-link {
 
 h1 {
     font-size: 12vmin;
+    color: var(--pink);
 }
 
 h2 {
-    font-size: 8vmin;
+    font-size: 6vmin;
 }
 
 hr {
-    background: var(--hot-pink);
+    background: var(--pink);
     margin: 3vmin auto;
     height: 1vmin;
     width: 8vmax;
     border-radius: 3vmax;
     border: hidden;
+}
+
+img {
+    padding: 2vmax 0;
+    width: 30vmax;
 }
 
 /*                  Arrow Down Button         */
@@ -127,7 +134,7 @@ hr {
     position: absolute;
     bottom: 5vh;
     display: inline-block;
-    color: white;
+    color: pink;
     text-decoration: none;
     padding-top: 15vh;
 }
@@ -138,8 +145,8 @@ hr {
     width: 5vmin;
     height: 5vmin;
     margin-left: -.5vw;
-    border-left: .8vmin solid white;
-    border-bottom: .8vmin solid white;
+    border-left: .8vmin solid pink;
+    border-bottom: .8vmin solid pink;
     transform: rotate(-45deg);
     animation: sdb07 2s infinite;
     box-sizing: border-box;
@@ -164,7 +171,7 @@ hr {
 .about {
     text-align: center;
     color: var(--blue);
-    background-color: rgb(255, 255, 255, 0.9);
+    background-color: rgb(255, 255, 255, 0.3);
     padding: 10vmin 10vw;
 }
 
@@ -189,8 +196,8 @@ hr {
 }
 
 .button:hover {
-    color: var(--hot-pink);
-    border: 0.3vmin solid var(--hot-pink);
+    color: var(--pink);
+    border: 0.3vmin solid var(--pink);
     font-style: italic;
 }
 
@@ -224,7 +231,7 @@ hr {
 }
 
 .projects {
-    background-color: rgb(255, 255, 255, 0.9);
+    background-color: rgb(255, 255, 255, 0.3);
     padding: 10vmin 10vw;
 }
 
@@ -261,7 +268,7 @@ td {
 }
 
 table a {
-    color: var(--hot-pink);
+    color: var(--pink);
     text-decoration: none;
 }
 
@@ -343,7 +350,7 @@ footer {
 
 .social-media a:hover {
     /* color: rgb(51, 212, 207); */
-    color: var(--hot-pink);
+    color: var(--pink);
 }
 
 /*────────────────── Media queries ──────────────────*/
@@ -394,7 +401,7 @@ footer {
 
     .nav-bar li {
         opacity: 1;
-        color: var(--hot-pink);
+        color: var(--pink);
         background-color: white;
         padding: 2vmax 3vmax;
         border: solid .5vmin;
