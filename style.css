@@ -126,22 +126,34 @@ hr {
 .about {
     text-align: center;
     color: var(--primary);
-    padding: 20vh 10vw 5vh 10vw;
+    padding: 18vh 12vw 2vh 12vw;
+    height: 100vh;
 }
 
 .about h2 {
     font-weight: bold;
 }
 
+.about h3 {
+    font-size: 2vmax;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    margin-bottom: 2vmax;
+    font-weight: 400;
+}
+
 .about p {
-    padding-top: 1vh;
-    text-align: left;
     font-size: 1.3vmax;
+    text-align: left;
+}
+
+.about a {
+    text-decoration: none;
 }
 
 .awards {
     text-align: left;
-    padding: 2vh 10vw;
+    padding: 5vh 12vw;
 }
 
 .awards h1 {
@@ -149,9 +161,10 @@ hr {
     font-family: 'Playfair Display', serif;
     text-align: center;
     margin-bottom: 2vmax;
+    font-weight: 400;
 }
 
-ul {
+.awards p, ul {
     font-size: 1.3vmax;
 }
 
@@ -159,13 +172,13 @@ ul {
 
 .button {
     color: var(--primary);
-    font-size: 3vmin;
+    font-size: 1.5vmax;
     text-decoration: none;
     border: 0.3vmin solid var(--primary);
     display: inline-block;
-    padding: 3vmin 2vmax;
-    margin-left: 3vmax;
-    margin-right: 3vmax;
+    padding: 2vh 1.75vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
     margin-top: 3vh;
     box-shadow: 1vmin 1vmin rgba(89, 46, 131, 0.5);
 }
@@ -173,7 +186,6 @@ ul {
 .button:hover {
     color: var(--secondary);
     border: 0.3vmin solid var(--secondary);
-    font-style: italic;
 }
 
 .button span {
@@ -293,7 +305,10 @@ ul {
 footer {
     width: 100%;
     background-image: url('footer_gradient.png');
-    background-size: 100% auto;
+    background-size: 100% 15vh;
+    background-position: bottom;
+    height: 15vh;
+    margin-bottom: -1vh;
 }
 
 /*─────────────── Social Media Icons ──────────────*/
