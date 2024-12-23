@@ -9,5 +9,3 @@ const navSlide = () => {
         hamburger.classList.toggle("toggle");
     }
 }
-
-window.onload = () => navSlide();   
