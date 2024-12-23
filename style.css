@@ -3,64 +3,79 @@
 
 
 :root {
-    --pink: pink;
-    --light-green: #b1ffa1;
-    --blue: #6C90C6;
+    --primary: black;
+    --secondary: #592E83;
 }
 
 * {
-    margin: 0;
-    padding: 0;
+    /* margin: 0;
+    padding: 0; */
     scroll-behavior: smooth;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Playfair Display', serif;
 }
 
 body {
-    background: url(bg.jpg) no-repeat center fixed;
+    background: url('bg_gradient.png'), linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)) no-repeat;
     background-size: 100% 100%;
-    color: pink;
+    color: --primary;
 }
 
 .section {
     padding: 10vh;
 }
 
-
 /*────────────────── Header ──────────────────*/
 
 header {
     width: 100%;
-    height: 13vh;
+    height: 10vh;
     display: flex;
     align-items: center;
-    justify-content: space-around;
     background: transparent;
     position: fixed;
     transition: 1s;
-    letter-spacing: 0.1vmax;
+    letter-spacing: 0.1vmin;
 }
 
-header:hover {
-    background: rgb(255, 255, 255, 0.8);
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2vw;
 }
 
 .nav-bar {
     list-style: none;
-    position: relative;
-    display: inline-flex;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+}
+
+.left-item {
+    margin-left: 1vw;
+    margin-right: auto;
+    /* Pushes "Home" to the far left */
+}
+
+.right-item {
+    margin-left: 1vw;
+    margin-right: 1vw;
+    /* Adds spacing between right items */
 }
 
 a.nav-link {
-    margin: 1vw;
-    font-size: 3vmin;
-    padding: 1vh 2vw;
+    font-size: 2.5vmin;
+    padding: 1vh 1vw;
     text-decoration: none;
     cursor: pointer;
-    color: var(--blue);
+    color: var(--primary);
 }
 
 .nav-link:hover {
-    color: var(--pink);
+    color: var(--secondary);
     border-bottom: solid 0.3vmin;
     transition: 0.3s;
 }
@@ -68,64 +83,41 @@ a.nav-link {
 /*───────────────── Home Page ─────────────────*/
 
 #home {
-    margin: 0 5vmax;
+    margin: 0 20vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: space-evenly;
-}
+    text-align: left;
+    justify-content: center;
 
-/* DEMO-SPECIFIC STYLES */
-.typewriter h3 {
-    overflow: hidden;
-    /* Ensures the content is not revealed until the animation */
-    white-space: nowrap;
-    /* Keeps the content on a single line */
-    margin: 0 auto;
-    /* Gives that scrolling effect as the typing happens */
-    animation:
-        typing 2.5s steps(50, end),
-        blink-caret 0.2s ease infinite;
-    font-size: 5vmin;
-    text-align: center;
-}
-
-/* The typing effect */
-@keyframes typing {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100%;
-    }
 }
 
 /*────────────────── Headings ──────────────────*/
 
+h2,
+h3,
+h4 {
+    margin: 0;
+    font-weight: 400;
+}
+
 h1 {
-    font-size: 12vmin;
-    color: var(--pink);
+    font-family: 'Tangerine', cursive;
+    font-size: 10vmax;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
 }
 
 h2 {
-    font-size: 6vmin;
+    font-size: 3vmax;
 }
 
-hr {
-    background: var(--pink);
-    margin: 3vmin auto;
-    height: 1vmin;
-    width: 8vmax;
-    border-radius: 3vmax;
-    border: hidden;
+h3 {
+    font-size: 1.5vmax;
 }
 
-img {
-    padding: 2vmax 0;
-    width: 30vmax;
+h4 {
+    font-size: 1vmax;
 }
 
 /*                  Arrow Down Button         */
@@ -134,7 +126,7 @@ img {
     position: absolute;
     bottom: 5vh;
     display: inline-block;
-    color: pink;
+    color: --primary;
     text-decoration: none;
     padding-top: 15vh;
 }
@@ -145,8 +137,8 @@ img {
     width: 5vmin;
     height: 5vmin;
     margin-left: -.5vw;
-    border-left: .8vmin solid pink;
-    border-bottom: .8vmin solid pink;
+    border-left: .8vmin solid --primary;
+    border-bottom: .8vmin solid --primary;
     transform: rotate(-45deg);
     animation: sdb07 2s infinite;
     box-sizing: border-box;
@@ -170,34 +162,40 @@ img {
 
 .about {
     text-align: center;
-    color: var(--blue);
-    background-color: rgb(255, 255, 255, 0.3);
-    padding: 10vmin 10vw;
+    color: var(--primary);
+    padding: 0 10vw;
+}
+
+hr {
+    height: 0;
+    background: transparent;
+    border-bottom: 0px solid var(--secondary);
+    width: 40%;
 }
 
 .about p {
-    padding-top: 3vh;
+    padding-top: 1vh;
     text-align: left;
     font-size: 3vmin;
 }
 
-/*             Resume Button                */
+/*             Resume Buttons                */
 
 .button {
-    color: var(--blue);
+    color: var(--primary);
     font-size: 3vmin;
     text-decoration: none;
-    border: 0.3vmin solid var(--blue);
-    border-radius: 5vmin;
+    border: 0.3vmin solid var(--primary);
     display: inline-block;
     padding: 3vmin 2vmax;
-    margin-top: 4vmax;
+    margin-top: 3vh;
     margin-left: 5vmax;
+    box-shadow: 1vmin 1vmin rgba(89, 46, 131, 0.5);
 }
 
 .button:hover {
-    color: var(--pink);
-    border: 0.3vmin solid var(--pink);
+    color: var(--secondary);
+    border: 0.3vmin solid var(--secondary);
     font-style: italic;
 }
 
@@ -227,49 +225,80 @@ img {
 
 #projects {
     text-align: center;
-    color: var(--blue);
+    color: var(--secondary);
 }
 
 .projects {
-    background-color: rgb(255, 255, 255, 0.3);
-    padding: 10vmin 10vw;
+    text-align: center;
+    color: var(--primary);
+    padding: 5vh 0;
 }
 
-table {
-    margin: auto;
-    padding: 2vw;
-    max-width: 90vw;
+.projects h1 {
+    font-size: 3vmax;
+    font-family: 'Playfair Display', serif;
 }
 
-th {
-    padding-bottom: 1vmin;
-    font-size: 5vmin;
+.projects h2 {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    font-size: 1.5vmax;
 }
 
-td {
-    padding: 2vw;
-    text-align: left;
-}
-
-.projectname {
-    font-size: 4vmin;
+.projects h3 {
+    font-size: 1.5vmax;
+    margin-bottom: 2vh;
     text-align: center;
 }
 
-.descrip {
-    font-size: 3.5vmin;
-    padding-left: 3vw;
-    max-width: 50vw;
-}
-
-.end {
-    text-align: center;
-    font-size: 3.5vmin;
-}
-
-table a {
-    color: var(--pink);
+.projects a {
     text-decoration: none;
+    color: var(--secondary);
+}
+
+.projects i {
+    font-size: 1.5vmax;
+    margin-right: 1.5vmin;
+}
+
+.card-container {
+    display: flex;
+    gap: 2vw;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0.5vmin 0.75vmin rgba(89, 46, 131, 0.2);
+    padding: 2vmax;
+    max-width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-1vh);
+    box-shadow: 0.75vmin 1vmin rgba(89, 46, 131, 0.5);
+}
+
+.card-links {
+    margin-top: 3vh;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.card-links a {
+    text-decoration: none;
+    color: var(--secondary);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.card-links a:hover {
+    font-style: italic;
+    color: var(--secondary);
 }
 
 /*────────────────── Contact ──────────────────*/
@@ -290,7 +319,31 @@ table a {
 
 footer {
     width: 100%;
-    background: white;
+    background-image: url('footer_gradient.png');
+    background-size: 100% auto;
+}
+
+/*─────────────── Social Media Icons ──────────────*/
+
+.social-media {
+    padding: 1vw;
+    display: flex;
+    position: center;
+    align-items: space-around;
+    justify-content: center;
+}
+
+.social-media a {
+    margin: 2vmin 1vmax;
+    font-size: 3vmax;
+    text-align: center;
+    display: inline-block;
+    color: var(--secondary);
+}
+
+.social-media a:hover {
+    /* color: rgb(51, 212, 207); */
+    color: var(--primary);
 }
 
 /*────────────────── Hamburger ──────────────────*/
@@ -301,7 +354,7 @@ footer {
 .hamburger div {
     width: 30px;
     height: 3px;
-    background: var(--blue);
+    background: var(--secondary);
     margin: 5px;
     transition: all 0.3s ease;
 }
@@ -328,29 +381,6 @@ footer {
         opacity: 1;
         transform: translatey(0px);
     }
-}
-
-/*─────────────── Social Media Icons ──────────────*/
-
-.social-media {
-    padding: 1vw;
-    display: flex;
-    position: center;
-    align-items: space-around;
-    justify-content: center;
-}
-
-.social-media a {
-    margin: 2vmin 1vmax;
-    font-size: 3vmax;
-    text-align: center;
-    display: inline-block;
-    color: var(--blue);
-}
-
-.social-media a:hover {
-    /* color: rgb(51, 212, 207); */
-    color: var(--pink);
 }
 
 /*────────────────── Media queries ──────────────────*/
@@ -401,7 +431,7 @@ footer {
 
     .nav-bar li {
         opacity: 1;
-        color: var(--pink);
+        color: var(--primary);
         background-color: white;
         padding: 2vmax 3vmax;
         border: solid .5vmin;
