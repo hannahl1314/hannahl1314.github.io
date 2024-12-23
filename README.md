@@ -2,4 +2,4 @@
 
 My personal website! 
 
-Feel free to check it out for an introduction to me and my projects. 
+Feel free to check it out to learn more about me and see my past projects and experience :) Connect if you'd like! 
