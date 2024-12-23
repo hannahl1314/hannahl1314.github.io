@@ -112,30 +112,47 @@ h4 {
     font-size: 1vmax;
 }
 
+hr {
+    height: 0;
+    background: transparent;
+    border-bottom: 0px solid var(--secondary);
+    width: 40%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
 /*────────────────── About Me ──────────────────*/
 
 .about {
     text-align: center;
     color: var(--primary);
     padding: 20vh 10vw 5vh 10vw;
-    min-height: 100vh;
 }
 
 .about h2 {
     font-weight: bold;
 }
 
-hr {
-    height: 0;
-    background: transparent;
-    border-bottom: 0px solid var(--secondary);
-    width: 40%;
-}
-
 .about p {
     padding-top: 1vh;
     text-align: left;
-    font-size: 1.5vmax;
+    font-size: 1.3vmax;
+}
+
+.awards {
+    text-align: left;
+    padding: 2vh 10vw;
+}
+
+.awards h1 {
+    font-size: 2vmax;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    margin-bottom: 2vmax;
+}
+
+ul {
+    font-size: 1.3vmax;
 }
 
 /*             Resume Buttons                */
@@ -186,7 +203,7 @@ hr {
 .projects {
     text-align: center;
     color: var(--primary);
-    padding: 5vh 5vw;
+    padding: 20vh 5vw 0 5vw;
 }
 
 .projects h1 {
